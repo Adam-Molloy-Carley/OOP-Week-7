@@ -3,34 +3,37 @@ package ie.atu.oop;
 import java.util.Scanner;
 
 public class member {
-    private String userID;
+    private String memberID;
     private String name;
     private int age;
 
     Scanner input = new Scanner(System.in);
 
-    public member(String userID, String name, String number) {
-        this.userID = userID;
+    public member(String memberID, String name, String number) {
+        this.memberID = memberID;
         this.name = name;
         this.age = Integer.parseInt(number);
     }
 
     public void addMember() {
-        userID = input.nextLine();
-        name = input.nextLine();
-        age = input.nextInt();
-        System.out.println(userID + " " + name + " " + age);
+       this.memberID = input.nextLine();
+       System.out.println("Please set the memberID: ");
+       this.name = input.nextLine();
+       System.out.println("Please input member name: ");
+       this.age = input.nextLine();
+       System.out.println("Please input member age: ");
+
     }
 
-    public String getUserID() {return userID;}
+    public String memberID() {return memberID;}
 
     public String getName() {return name;}
 
     public int getAge() {return age;}
 
     public void displayDetails() {
-        System.out.println("UserID: " + userID);
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+        System.out.println("MemberID: " + this.memberID);
+        System.out.println("Name: " + this.name);
+        System.out.println("Age: " + this.age);
     }
 }
